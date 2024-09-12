@@ -1,4 +1,4 @@
-package ru.vsu.css.tasks.task_2;
+package ru.vsu.css.tupicyn.tasks.task_2;
 
 import java.util.Scanner;
 

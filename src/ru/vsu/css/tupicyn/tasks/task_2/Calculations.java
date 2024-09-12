@@ -1,4 +1,4 @@
-package ru.vsu.css.tasks.task_2;
+package ru.vsu.css.tupicyn.tasks.task_2;
 
 public class Calculations {
 
