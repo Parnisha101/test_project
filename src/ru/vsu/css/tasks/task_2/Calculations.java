@@ -3,9 +3,8 @@ package ru.vsu.css.tasks.task_2;
 public class Calculations {
 
     public String numberToString (Integer number) {
-        String numberStr = number.toString();
-        numberStr = numberStr.replace("-", "");
-        return  numberStr;
+        number = Math.abs(number);
+        return number.toString();
     }
 
     public int getMaxDigit (Integer number) {
