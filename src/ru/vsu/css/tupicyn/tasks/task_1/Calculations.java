@@ -2,24 +2,22 @@ package ru.vsu.css.tupicyn.tasks.task_1;
 
 public class Calculations {
 
-    public String getDigits(Integer number) {
+    public int getDigits(Integer number) {
         number = number % 1000;
-        return number.toString();
+        return number;
     }
 
-    public int calculateDigitsSum (String digits) {
-        int digits_length = digits.length();
+    public int calculateDigitsSum (int digits) {
         int sum = 0;
-        for (int digitNo = 0; digitNo < digits_length; digitNo++) {
-            char digitChar = digits.charAt(digitNo);
-            int digit = Integer.parseInt(Character.toString(digitChar));
-            sum = sum + digit;
+        for (int i = 1; i < 3; i++) {
+            sum = digits % 10 + sum;
+            digits = digits / 10;
         }
         return sum;
     }
 
     public int calculate (Integer number) {
-        String digits = getDigits(number);
+        int digits = getDigits(number);
         return calculateDigitsSum(digits);
     }
 
