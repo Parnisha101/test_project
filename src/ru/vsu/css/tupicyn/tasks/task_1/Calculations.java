@@ -8,11 +8,9 @@ public class Calculations {
     }
 
     public int calculateDigitsSum (int digits) {
-        int sum = 0;
-        for (int i = 1; i < 3; i++) {
-            sum = digits % 10 + sum;
-            digits = digits / 10;
-        }
+        int sum = digits / 100;
+        sum = sum + digits / 10 % 10;
+        sum = sum + digits % 10;
         return sum;
     }
 

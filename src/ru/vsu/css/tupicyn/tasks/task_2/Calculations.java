@@ -2,29 +2,21 @@ package ru.vsu.css.tupicyn.tasks.task_2;
 
 public class Calculations {
 
-    public String numberToString (Integer number) {
-        number = Math.abs(number);
-        return number.toString();
-    }
-
     public int getMaxDigit (Integer number) {
-        String numberStr = numberToString(number);
+        number = Math.abs(number);
         int maxDigit = 0;
-        for (int digitNo = 0; digitNo < numberStr.length(); digitNo++) {
-            char digitChar = numberStr.charAt(digitNo);
-            int digit = Integer.parseInt(Character.toString(digitChar));
-            maxDigit = Integer.max(maxDigit, digit);
+        while (number > 0) {
+            maxDigit = Integer.max(maxDigit, number%10);
+            number = number / 10;
         }
         return maxDigit;
     }
 
     public int getMinDigit (Integer number) {
-        String numberStr = numberToString(number);
         int minDigit = 9;
-        for (int digitNo = 0; digitNo < numberStr.length(); digitNo++) {
-            char digitChar = numberStr.charAt(digitNo);
-            int digit = Integer.parseInt(Character.toString(digitChar));
-            minDigit = Integer.min(minDigit, digit);
+        while (number > 0) {
+            minDigit = Integer.min(minDigit, number%10);
+            number = number / 10;
         }
         return minDigit;
     }
