@@ -16,30 +16,24 @@ public class Main {
         char mark = '!';
         char space_bar = ' ';
         for (int mark_count = width; mark_count >= 0; mark_count--) {
-            for (int i = 0; i < width; i++) {
-                System.out.print(line);
-            }
+            print_chars(line, width);
             System.out.print("\n");
             if ((mark_count % 2) == 0) {
-                for (int i = 0; i < (width - mark_count); i++){
-                    System.out.print(space_bar);
-                }
-                for (int i = 0; i < mark_count; i++){
-                    System.out.print(mark);
-                }
+                print_chars(space_bar, width - mark_count);
+                print_chars(mark, mark_count);
                 System.out.print("\n");
             } else {
-                for (int i = 0; i < mark_count; i++){
-                    System.out.print(mark);
-                }
-                for (int i = 0; i < (width - mark_count); i++){
-                    System.out.print(space_bar);
-                }
+                print_chars(mark, mark_count);
+                print_chars(space_bar, width - mark_count);
                 System.out.print("\n");
             }
         }
-        for (int i = 0; i < width; i++) {
-            System.out.print(line);
+        print_chars(line, width);
+    }
+    
+    public static void print_chars (char chr, int chr_count) {
+        for (int i = 0; i < chr_count; i++){
+            System.out.print(chr);
         }
     }
 }
