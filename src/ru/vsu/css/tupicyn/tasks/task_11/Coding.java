@@ -61,4 +61,32 @@ public class Coding {
         resetStep();
         return result;
     }
+
+    private String decodeSymbol(String symbol) {
+        if (codeable(symbol)) {
+            boolean isLowerCase = isLowerCase(symbol);
+            symbol = symbol.toLowerCase();
+            try {
+                String eng = "abcdefghijklmnopqrstuvwxyz";
+                int index = engStep.indexOf(symbol);
+                symbol = String.valueOf(eng.charAt(index));
+            } catch (Exception e) {
+                String rus = "абвгдеёжзийклмнопрстуфхцчшщьыъэюя";
+                int index = rusStep.indexOf(symbol);
+                symbol = String.valueOf(rus.charAt(index));
+            }
+            if (isLowerCase) return symbol;
+            else return symbol.toUpperCase();
+        } else return symbol;
+    }
+
+    public String decodeText(String text, int step) {
+        setStep(step);
+        String result = "";
+        for (int i = 0; i < text.length(); i++) {
+            result = result + decodeSymbol(String.valueOf(text.charAt(i)));
+        }
+        resetStep();
+        return result;
+    }
 }

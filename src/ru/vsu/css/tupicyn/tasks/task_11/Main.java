@@ -7,5 +7,7 @@ public class Main {
         int step = 2;
         Coding coding = new Coding();
         System.out.println(coding.encodeText(text, step));
+        text = "cdeFGH 123 вгдЕЁЖ";
+        System.out.println(coding.decodeText(text, step));
     }
 }
