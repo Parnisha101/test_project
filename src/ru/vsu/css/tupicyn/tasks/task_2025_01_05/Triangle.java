@@ -1,4 +1,4 @@
-package ru.vsu.css.tupicyn.tasks.task_2025_05;
+package ru.vsu.css.tupicyn.tasks.task_2025_01_05;
 
 import java.text.MessageFormat;
 
