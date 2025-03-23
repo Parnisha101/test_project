@@ -1,14 +1,12 @@
 package ru.vsu.css.tupicyn.tasks.task_2025_02_17;
 
-import java.util.List;
-
 public class Main {
     public static void main(String[] args) {
-        List<Integer> nums = List.of(1, -2, -33, 4, -6, -6, -8, 10, -2, -3);
+        MyArray<Integer> nums = new MyArray<>(1, -2, -33, 4, -6, -6, -8, 10, -2, -3);
         System.out.println(task(nums));
     }
 
-    public static int task(List<Integer> list) {
+    public static int task(MyArray<Integer> list) {
         int targetIndex = list.size() - 1;
         int targetCounter = 0;
         int counter = 0;
