@@ -2,7 +2,7 @@ package ru.vsu.css.tupicyn.tasks.task_2025_02_17;
 
 import java.util.Iterator;
 
-public class MyArray<T> implements Iterable<T>{
+public class MyList<T> implements Iterable<T>{
 
     private static class Node<T> {
         public T value;
@@ -22,7 +22,7 @@ public class MyArray<T> implements Iterable<T>{
     private int size;
 
     @SafeVarargs
-    public MyArray(T... elements) {
+    public MyList(T... elements) {
         this.head = null;
         this.size = 0;
         for (T element : elements) {

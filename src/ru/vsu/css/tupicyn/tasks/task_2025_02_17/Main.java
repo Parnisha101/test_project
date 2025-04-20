@@ -2,11 +2,11 @@ package ru.vsu.css.tupicyn.tasks.task_2025_02_17;
 
 public class Main {
     public static void main(String[] args) {
-        MyArray<Integer> nums = new MyArray<>(1, -2, -33, 4, -6, -6, -8, 10, -2, -3);
+        MyList<Integer> nums = new MyList<>(1, -2, -33, 4, -6, -6, -8, 10, -2, -3, -8);
         System.out.println(task(nums));
     }
 
-    public static int task(MyArray<Integer> list) {
+    public static int task(MyList<Integer> list) {
         int targetIndex = list.size() - 1;
         int targetCounter = 0;
         int counter = 0;
